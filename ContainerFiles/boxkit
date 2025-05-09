@@ -1,15 +1,6 @@
-FROM quay.io/toolbx-images/alpine-toolbox:edge
+FROM cgr.dev/chainguard/wolfi-base:latest@sha256:4c4a48b87480f65c9600eeda9afc783a54def1d936edde52d1bca11bda885d37
 
-LABEL com.github.containers.toolbox="true" \
-      usage="This image is meant to be used with the toolbox or distrobox command" \
-      summary="A cloud-native terminal experience" \
+LABEL summary="A jellyfin server built with wolfi" \
       maintainer="jorge.castro@gmail.com"
 
-# Copy the setup scripts and package list
-COPY ../scripts/boxkit.sh /
-COPY ../scripts/distrobox-shims.sh /
-COPY ../packages/boxkit.packages /
-
-# Run the setup scripts
-RUN chmod +x boxkit.sh distrobox-shims.sh && /boxkit.sh
-RUN rm /boxkit.sh /distrobox-shims.sh /boxkit.packages
+RUN apk add jellyfin
