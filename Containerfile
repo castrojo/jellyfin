@@ -4,3 +4,6 @@ LABEL summary="A jellyfin server built with wolfi" \
       maintainer="jorge.castro@gmail.com"
 
 RUN apk add jellyfin
+
+ENTRYPOINT [ "/jellyfin/jellyfin" ]
+CMD [ "--datadir", "/data", "--configdir", "/config", "--cachedir", "/cache"]
