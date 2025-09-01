@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2025-05-09)
+
+
+### Bug Fixes
+
+* cleanup ([78c606f](https://github.com/castrojo/jellyfin/commit/78c606f9478a52bf83e5ed165a75c50d68afa578))
+
 ## [1.2.0](https://github.com/ublue-os/boxkit/compare/v1.1.0...v1.2.0) (2025-01-04)
 
 
